@@ -8,4 +8,4 @@ Covers trivial cases of:
   * Transactions
   * Queries - Native, JPQL, NamedParam
   * Locks
-  * Fetch and Load plans for Entity Graphs
+  * Fetch and Load plans for Entity Graphs on OneToMany mappings
