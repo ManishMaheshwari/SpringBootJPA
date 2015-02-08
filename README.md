@@ -1,5 +1,6 @@
 # SpringBootJPA
 Spring Boot Application with JPA 1.2
+
 MySQL.txt has DDL scripts.
 
 Covers trivial cases of:
