@@ -2,13 +2,8 @@ package manish.repo;
 
 import java.util.List;
 
-import javax.persistence.LockModeType;
-
-import manish.entities.Customer;
-
 import org.springframework.data.jpa.repository.EntityGraph;
 import org.springframework.data.jpa.repository.EntityGraph.EntityGraphType;
-import org.springframework.data.jpa.repository.Lock;
 import org.springframework.data.jpa.repository.Modifying;
 import org.springframework.data.jpa.repository.Query;
 import org.springframework.data.repository.CrudRepository;
@@ -17,6 +12,8 @@ import org.springframework.stereotype.Repository;
 import org.springframework.transaction.annotation.Isolation;
 import org.springframework.transaction.annotation.Propagation;
 import org.springframework.transaction.annotation.Transactional;
+
+import manish.entities.Customer;
 
 @Repository
 public interface CustomerRepository extends CrudRepository<Customer, Long> {

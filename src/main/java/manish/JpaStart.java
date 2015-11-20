@@ -1,9 +1,7 @@
 package manish;
 
 import java.util.Arrays;
-import java.util.Collections;
 import java.util.HashSet;
-import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.CommandLineRunner;
@@ -39,31 +37,31 @@ public class JpaStart implements CommandLineRunner {
 		printCustomer(customerRepo.findAll());
 		
 		// fetch customers by last name
-		System.out.println("Customer found with findByLastName('Bauer'):");
-		printCustomer(customerRepo.findByLastName("Bauer"));
+		System.out.println("Customer found with findByLastName('Maheshwari'):");
+		printCustomer(customerRepo.findByLastName("Maheshwari"));
 		
 		// fetch customers by first name and last name
-		System.out.println("Customer found with findByFirstNameAndLastName('MJack', 'MBauer'):");
-		printCustomer(customerRepo.findByFirstNameAndLastName("MJack", "MBauer"));
+		System.out.println("Customer found with findByFirstNameAndLastName('Most', 'Important'):");
+		printCustomer(customerRepo.findByFirstNameAndLastName("Most", "Important"));
 		
 		// fetch customers by first name and last name
-		System.out.println("Customer found with findByFirstNameOrLastNameOrderByFirstNameAsc('MJack', 'Bauer'):");
-		printCustomer(customerRepo.findByFirstNameOrLastNameOrderByFirstNameAsc("MJack", "Bauer"));
+		System.out.println("Customer found with findByFirstNameOrLastNameOrderByFirstNameAsc('Most', 'Coincidence'):");
+		printCustomer(customerRepo.findByFirstNameOrLastNameOrderByFirstNameAsc("Most", "Coincidence"));
 
 		// fetch customers defined by JAP @Query
-		System.out.println("Customer found with findLastName('Bauer'):");
-		printCustomer(customerRepo.findLastName("Bauer"));
+		System.out.println("Customer found with findLastName('Kumar'):");
+		printCustomer(customerRepo.findLastName("Kumar"));
 
 		// fetch customers defined by Native @Query
 		System.out.println("Customer found with findEveryone(2):");
 		printCustomer(customerRepo.findEveryone(2));
 
 		// fetch customers defined by Named Parameter @Query
-		System.out.println("Customer found with findLastNamedParam('ZBauer'):");
-		printCustomer(customerRepo.findLastNamedParam("ZBauer"));
+		System.out.println("Customer found with findLastNamedParam('Coincidence'):");
+		printCustomer(customerRepo.findLastNamedParam("Coincidence"));
 		
 		//Modifying, and Transactional
-		customerRepo.replaceLastName("MBauer", "Manish");
+		customerRepo.replaceLastName("Important", "Replaced");
 		
 		// fetch customers by EntityGraph
 		System.out.println("Customer found with findAllDetails():");

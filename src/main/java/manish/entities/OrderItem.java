@@ -9,7 +9,6 @@ import javax.persistence.JoinColumn;
 import javax.persistence.ManyToOne;
 import javax.persistence.Table;
 
-
 @Entity
 @Table(name = "orders")
 public class OrderItem {
@@ -45,6 +44,11 @@ public class OrderItem {
 
 	public void setDescription(String description) {
 		this.description = description;
+	}
+
+	@Override
+	public String toString() {
+		return "OrderItem [id=" + id + ", customer=" + customer.getId() + ", description=" + description + "]";
 	}
 	
 }
